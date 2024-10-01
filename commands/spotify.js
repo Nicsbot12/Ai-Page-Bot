@@ -8,7 +8,7 @@ module.exports = {
     const query = args.join(' ');
 
     try {
-      const apiUrl = `https://markdevs-last-api.onrender.com/search/spotify?q=${encodeURIComponent(query)}`;
+      const apiUrl = `https://api-nako-choru-production.up.railway.app/spotify?search=${encodeURIComponent(query)}`;
       const response = await axios.get(apiUrl);
 
       // Extract the Spotify link from the response
