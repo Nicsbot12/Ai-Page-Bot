@@ -5,7 +5,7 @@ module.exports = {
   description: 'Get a Spotify link for a song',
   author: 'Deku (rest api)',
   async execute(senderId, args, pageAccessToken, sendMessage) {
-    const query = args.join(' ');
+    const query = args.join();
 
     try {
       const apiUrl = `https://api-nako-choru-production.up.railway.app/spotify?search=${encodeURIComponent(query)}`;
