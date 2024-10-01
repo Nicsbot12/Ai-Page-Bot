@@ -7,7 +7,7 @@ module.exports = {
   async execute(senderId, args, pageAccessToken, sendMessage) {
     const query = args.join(' ');
     try {
-      const apiUrl = `https://api-nako-choru-production.up.railway.app/ph/search?q=${encodeURIComponent(query)}`;
+      const apiUrl = `https://deku-rest-api.gleeze.com/search/lyrics?q=${encodeURIComponent(query)}`;
       const response = await axios.get(apiUrl);
       const result = response.data.result;
 
@@ -26,12 +26,12 @@ module.exports = {
         }
 
         // Optionally send an image if available
-        if (result.video) {
+        if (result.image) {
           sendMessage(senderId, {
             attachment: {
-              type: 'video',
+              type: 'image',
               payload: {
-                url: result.video,
+                url: result.image,
                 is_reusable: true
               }
             }
@@ -54,4 +54,4 @@ function splitMessageIntoChunks(message, chunkSize) {
     chunks.push(message.slice(i, i + chunkSize));
   }
   return chunks;
-}
+  }
