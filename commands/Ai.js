@@ -5,7 +5,7 @@ module.exports = {
   description: 'Ask a question to Ai',
   author: 'Nics',
   async execute(senderId, args, pageAccessToken, sendMessage) {
-    const prompt = args.join("");
+    const prompt = args.join('');
     try {
       const apiUrl = `https://deku-rest-api.gleeze.com/api/gpt-4o?q=${encodeURIComponent(prompt)}&uid=100`;
       const response = await axios.get(apiUrl);
