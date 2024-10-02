@@ -1,6 +1,8 @@
-const Groq = require('groq-sdk');
+const Openai = require('openai');
 
-const groq = new Groq({ apiKey: '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' });
+const client = new OpenAI({
+  apiKey: process.env['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'], // This is the default and can be omitted
+});
 
 
 const messageHistory = new Map();
@@ -26,15 +28,10 @@ module.exports = {
       userHistory.push({ role: 'user', content: messageText });
 
       
-      const chatCompletion = await groq.chat.completions.create({
-        messages: userHistory,
-        model: 'llama3-8b-8192',
-        temperature: 1,
-        max_tokens: 1024,
-        top_p: 1,
-        stream: true,
-        stop: null
-      });
+      const response = await client.chat.completions.create({
+    messages: [{ role: 'user', content: 'Say this is a test' }],
+    model: 'gpt-4o-mini'
+});
 
       
       let responseMessage = '';
