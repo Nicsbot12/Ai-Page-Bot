@@ -1,4 +1,4 @@
-const Openai = require('openai');
+import OpenAI from 'openai';
 
 const client = new OpenAI({
   apiKey: process.env['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'], // This is the default and can be omitted
