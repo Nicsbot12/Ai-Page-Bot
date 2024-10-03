@@ -1,6 +1,6 @@
 const Groq = require('groq-sdk');
 
-const groq = new Groq({ apiKey: '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' });
+const groq = new Groq({ apiKey: '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' });
 
 
 const messageHistory = new Map();
@@ -53,7 +53,7 @@ name: 'ai',
 
     } catch (error) {
       console.error('Error communicating with Groq:', error.message);
-      sendMessage(senderId, { text: "I'm busy right now, please try again later." }, pageAccessToken);
+      sendMessage(senderId, { text: "💬 | 𝙰𝚗𝚜𝚠𝚎𝚛𝚒𝚗𝚐...." }, pageAccessToken);
     }
   }
 };
