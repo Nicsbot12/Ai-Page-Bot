@@ -1,6 +1,6 @@
 const Groq = require('groq-sdk');
 
-const groq = new Groq({ apiKey: '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' });
+const groq = new Groq({ apiKey: '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' });
 
 
 const messageHistory = new Map();
