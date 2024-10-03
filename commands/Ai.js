@@ -6,6 +6,9 @@ const groq = new Groq({ apiKey: 'gsk_gVsx4zUQAZ1Ac0HfbU2UWGdyb3FYXBFc1lzHbJqvvFf
 const messageHistory = new Map();
 
 module.exports = {
+name: 'ai',
+  description: 'Ai groq',
+  author: 'Burat',
   
   async execute(senderId, messageText, pageAccessToken, sendMessage) {
     try {
