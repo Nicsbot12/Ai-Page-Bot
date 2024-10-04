@@ -14,7 +14,7 @@ for (const file of commandFiles) {
 async function handleMessage(event, pageAccessToken) {
   const senderId = event.sender.id;
   const messageText = event.message.text.toLowerCase();
-  if (!messageText.startsWith(prefix)) return;
+  if (!messageText.startsWith(/)) return;
 
   const args = messageText.split(' ');
   const commandName = args.shift();
