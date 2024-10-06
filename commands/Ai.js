@@ -1,4 +1,3 @@
-const require = ('axios')
 module.exports = {
 config: {
 name: "ai", 
