@@ -1,12 +1,12 @@
 const Groq = require('groq-sdk');
 
-const groq = new Groq({ apiKey: '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' });
+const groq = new Groq({ apiKey: "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" });
 
 
 const messageHistory = new Map();
 
 module.exports = {
-  name: '/ai',
+  name: 'ai',
   description: 'Ai groq',
   author: 'Burat',
 
