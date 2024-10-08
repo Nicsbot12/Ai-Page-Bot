@@ -7,7 +7,7 @@ module.exports = {
   async execute(senderId, args, pageAccessToken, sendMessage) {
     const prompt = args.join( );
     try {
-      const apiUrl = `https://deku-rest-api.gleeze.com/gpt4?prompt=${encodeURIComponent(prompt)}&uid=100${senderId}`;
+      const apiUrl = `https://markdevs-last-api.onrender.com/api/v3/gpt4?ask=${encodeURIComponent(prompt)}&uid=100${senderId}`;
       const response = await axios.get(apiUrl);
       const text = response.data.gpt4;
 
