@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const prefix = ('/');
 
 module.exports = {
   name: 'help',
