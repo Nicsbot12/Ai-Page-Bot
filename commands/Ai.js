@@ -1,5 +1,5 @@
 const Groq = require('groq-sdk');
-
+const prefix = ('/');
 const groq = new Groq({ apiKey: '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' });
 
 
