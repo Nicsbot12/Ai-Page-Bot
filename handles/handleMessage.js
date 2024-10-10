@@ -16,7 +16,7 @@ async function handleMessage(event, pageAccessToken) {
   const messageText = event.message.text.toLowerCase();
  
   if (!messageText.startsWith(prefix)) return;
-
+ 
   const args = messageText.split(' ');
   const commandName = args.shift();
 
