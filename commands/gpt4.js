@@ -1,4 +1,4 @@
-const prefix = require('/');
+const prefix = ('/');
 const axios = require('axios');
 
 module.exports = {
