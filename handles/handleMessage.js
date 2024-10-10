@@ -1,4 +1,4 @@
-const prefix = ('/');
+const prefix = require('/');
 const fs = require('fs');
 const path = require('path');
 const { sendMessage } = require('./sendMessage');
