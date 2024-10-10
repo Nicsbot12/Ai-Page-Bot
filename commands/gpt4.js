@@ -1,5 +1,4 @@
 const axios = require('axios');
-const prefix = ('/');
 module.exports = {
   name: 'gpt4',
   description: 'Ask a question to GPT-4',
