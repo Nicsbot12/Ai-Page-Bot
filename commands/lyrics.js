@@ -1,5 +1,4 @@
 const axios = require('axios');
-const prefix = ('/');
 module.exports = {
   name: 'lyrics',
   description: 'Fetch song lyrics',
